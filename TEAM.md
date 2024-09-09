@@ -2,10 +2,10 @@
 
 ## Team Members 
 
-### Gabe Carlson
+### Gabe Carlson: gabrieljcarlson@lewisu.edu
 
-### Justin Cordero
+### Justin Cordero: justinccordero@lewisu.edu
 
-### Ryan Hinkle
+### Ryan Hinkle: ryanehinkle@lewisu.edu
 
-### Michael Szostak
+### Michael Szostak: michaeldszostak@lewisu.edu
