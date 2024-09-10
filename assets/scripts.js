@@ -49,7 +49,7 @@ function updateTime() {
       hours = 12;
   }
   
-  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+  const timeString = `${hours}:${minutes} ${ampm}`;
   
   // Update the HTML elements
   document.getElementById('live-date').textContent = dateString;
@@ -182,10 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function submitForm() {
   if (skipButtonPressed) {
-    locationSet = false;
-    document.getElementById('locationOverlay').style.display = 'none';
-    document.getElementById('overlay').style.display = 'block';
-    resetOverlayInterval = setInterval(resetOverlay, 5000);
+    document.documentElement.requestFullscreen();
   } else {
     locationName = document.getElementById('locationInput').value;
     locationSet = true;
