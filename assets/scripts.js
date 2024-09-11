@@ -40,11 +40,12 @@ function updateTime() {
   const seconds = now.getSeconds().toString().padStart(2, '0');
   let ampm = 'AM';
   
-  if (hours > 12) {
+  if (hours >= 12) {
       hours -= 12;
       ampm = 'PM';
   }
   
+  // Show hour 0 as 12 (midnight)
   if (hours === 0) {
       hours = 12;
   }
