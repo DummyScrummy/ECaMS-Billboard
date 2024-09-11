@@ -37,7 +37,6 @@ function updateTime() {
   // Format the time
   let hours = now.getHours();
   const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
   let ampm = 'AM';
   
   if (hours >= 12) {
@@ -180,22 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
     submitForm();
   });
 });
-
-function submitForm() {
-  if (skipButtonPressed) {
-    document.documentElement.requestFullscreen();
-    locationSet = false;
-    document.getElementById('locationOverlay').style.display = 'none';
-    document.getElementById('overlay').style.display = 'block';
-    resetOverlayInterval = setInterval(resetOverlay, 5000);
-  } else {
-    locationName = document.getElementById('locationInput').value;
-    locationSet = true;
-    document.getElementById('locationOverlay').style.display = 'none';
-    document.getElementById('overlay').style.display = 'block';
-    resetOverlayInterval = setInterval(resetOverlay, 5000);
-  }
-}
 
 function sendData() {
   const timestamp = new Date().toISOString();
